@@ -1,0 +1,96 @@
+  :root{
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --font-open:  'Open Sans', sans-serif;
+  }
+  
+  .header {
+    z-index: 999;
+    background-color: rgb(250, 248, 248);
+  }
+  
+  .header__main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+  }
+  
+  .header__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  
+  .header__item {
+    padding: 20px 0;
+    margin-right: 50px;
+    & a:hover{
+        color: rgb(124, 123, 123);
+    }
+  }
+  
+  .header__item a {
+    text-decoration: none;
+    font-family: var(--font-open);
+    font-size: 16px;
+    color: rgb(26, 24, 24);
+    }
+    .header__menu{
+        position: relative;
+        z-index: 1000;
+        background-image: url('../../images/hamburg-menu.svg');
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        border: none;
+        display: none;
+        transition: all ease 0.5s
+    }
+  
+    
+  @media screen and (max-width: 576px){
+    .container{
+          padding: 0 10px;
+    }
+    .header__nav{
+        display: none;
+    }
+    .header__item a{
+        font-size: 30px;
+    }
+    .header__item{
+        position: relative;
+        // margin-bottom: 20px;
+    }
+    .header__menu{
+        z-index: 1000;
+        display: block;
+        margin-right: 20px;
+    }
+    .header__nav{
+        position: fixed;
+        top: 0;
+        right: -150%;
+        width: 60%;
+        min-height: 100vh;
+        background-color: #ea4343bd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 500;
+        transition: all ease 0.5s;
+      }
+      .header__list{
+          display: flex;
+          flex-direction: column;
+        a{
+            color: #fff;
+        }
+      }
+    }
+.show{
+    right: 0px;
+  }
